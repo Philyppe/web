@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>La era de mil pantallas</title>
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+<h1>La era de mil pantallas</h1>
+
+<div class="models-container">
+    <model-viewer
+            src="./models/modelo.glb"
+            alt="Modelo 1"
+            camera-controls
+            auto-rotate
+            shadow-intensity="1"
+            environment-image="neutral"
+            style="background: transparent;"
+    ></model-viewer>
+
+    <model-viewer
+            src="./models/modelo2.glb"
+            alt="Modelo 2"
+            camera-controls
+            auto-rotate
+            shadow-intensity="1"
+            environment-image="neutral"
+            style="background: transparent;"
+    ></model-viewer>
+</div>
+
+<div class="buttons-box">
+    <h2>Panel de errores</h2>
+    <div class="popup-buttons">
+        <button id="btn1">Error 1</button>
+        <button id="btn2">Error 2</button>
+    </div>
+</div>
+
+<div id="popup-container"></div>
+
+<script src="./script.js"></script>
+</body>
+</html>
