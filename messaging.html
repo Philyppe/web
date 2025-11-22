@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Messaging - Zendesk Demo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+  <style>
+    .msg-box {
+      height: 380px;
+      overflow-y: auto;
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .msg-in {
+      background: #e8f7e8;
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      max-width: 75%;
+    }
+
+    .msg-out {
+      background: #f1f1f1;
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      margin-left: auto;
+      max-width: 75%;
+    }
+
+    .channel-badge {
+      font-size: 12px;
+      padding: 4px 7px;
+      border-radius: 6px;
+    }
+
+    .wb { background:#0d6efd; color:white; }
+    .wa { background:#25D366; color:white; }
+    .fb { background:#1877F2; color:white; }
+  </style>
+</head>
+
+<body class="bg-light">
+
+  <div class="container py-4">
+
+    <!-- BREADCRUMB -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Messaging</li>
+      </ol>
+    </nav>
+
+    <h2 class="mb-3">Zendesk Messaging</h2>
+    <p class="text-muted">Simulación estática de conversaciones unificadas a través de múltiples canales.</p>
+
+    <div class="row g-4 mt-3">
+
+      <!-- PANEL PRINCIPAL -->
+      <div class="col-md-8">
+        <div class="card shadow-sm">
+          <div class="card-body">
+
+            <h5 class="mb-3">Conversación</h5>
+
+            <div class="msg-box">
+
+              <!-- MENSAJE WHATSAPP -->
+              <div class="msg-in">
+                <span class="channel-badge wa">WhatsApp</span><br>
+                Hola, quiero saber el estado de mi pedido.
+              </div>
+
+              <!-- RESPUESTA AGENTE -->
+              <div class="msg-out">
+                <span class="channel-badge wb">Web</span><br>
+                ¡Hola! Claro, ¿puedes compartir tu número de orden?
+              </div>
+
+              <!-- MENSAJE FACEBOOK -->
+              <div class="msg-in">
+                <span class="channel-badge fb">Facebook</span><br>
+                Sí, es el #55321.  
+              </div>
+
+              <!-- RESPUESTA AGENTE -->
+              <div class="msg-out">
+                <span class="channel-badge wb">Web</span><br>
+                Gracias. Veo que tu pedido está en camino y llegará mañana por la tarde.
+              </div>
+
+              <!-- MENSAJE WHATSAPP -->
+              <div class="msg-in">
+                <span class="channel-badge wa">WhatsApp</span><br>
+                Perfecto, gracias.
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL LATERAL -->
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+
+            <h5 class="mb-3">Información del Usuario</h5>
+
+            <p class="mb-1"><strong>Nombre:</strong> Daniela Silva</p>
+            <p class="mb-1"><strong>Canales activos:</strong></p>
+            <ul>
+              <li>WhatsApp</li>
+              <li>Facebook Messenger</li>
+            </ul>
+            <p class="mb-1"><strong>Cliente desde:</strong> 2021</p>
+            <p class="mb-3"><strong>Última compra:</strong> 5 días atrás</p>
+
+            <hr>
+
+            <h6>Acciones</h6>
+            <ul>
+              <li>Convertir en ticket</li>
+              <li>Marcar como resuelto</li>
+              <li>Agregar nota interna</li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- NAVEGACIÓN -->
+    <div class="mt-4 d-flex gap-3">
+      <a href="index.html" class="btn btn-outline-secondary">Volver al inicio</a>
+      <a href="explore.html" class="btn btn-outline-primary">Ir a Explore</a>
+      <a href="automations.html" class="btn btn-outline-primary">Ir a Automations</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore - Zendesk Demo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+  <style>
+    .metric-box {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+    .metric-number {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .chart-placeholder {
+      height: 260px;
+      border: 2px dashed #bbbbbb;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #777;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+
+  <div class="container py-4">
+
+    <!-- BREADCRUMB -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Explore</li>
+      </ol>
+    </nav>
+
+    <h2 class="mb-3">Zendesk Explore</h2>
+    <p class="text-muted">Métricas y reportes.</p>
+
+    <!-- MÉTRICAS -->
+    <div class="row g-4 mt-3">
+
+      <div class="col-md-4">
+        <div class="metric-box shadow-sm">
+          <div class="metric-number">324</div>
+          <div class="text-muted">Tickets esta semana</div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="metric-box shadow-sm">
+          <div class="metric-number">1h 12m</div>
+          <div class="text-muted">Tiempo medio de primera respuesta</div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="metric-box shadow-sm">
+          <div class="metric-number">92%</div>
+          <div class="text-muted">Satisfacción del cliente</div>
+        </div>
+      </div>
+
+    </div>
+
+<!-- GRÁFICO (SIMULADO) -->
+<div class="card shadow-sm mt-4">
+  <div class="card-body">
+    <h5 class="mb-3">Volumen de tickets — últimos 7 días</h5>
+
+    <div class="chart-placeholder" style="overflow: visible; border: none;">
+      <img src="graficoDatos.png" 
+           alt="Gráfico simulado"
+           style="width: 100%; height: 100%;">
+    </div>
+
+  </div>
+</div>
+
+
+    <!-- TABLA DE DATOS -->
+    <div class="card shadow-sm mt-4 mb-3">
+      <div class="card-body">
+
+        <h5 class="mb-3">Top categorías de tickets</h5>
+
+        <table class="table table-bordered">
+          <thead class="table-light">
+            <tr>
+              <th>Categoría</th>
+              <th>Tickets</th>
+              <th>Promedio de resolución</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Facturación</td>
+              <td>87</td>
+              <td>8h 12m</td>
+            </tr>
+            <tr>
+              <td>Acceso a cuenta</td>
+              <td>65</td>
+              <td>2h 45m</td>
+            </tr>
+            <tr>
+              <td>Errores técnicos</td>
+              <td>42</td>
+              <td>14h 30m</td>
+            </tr>
+            <tr>
+              <td>Consultas generales</td>
+              <td>130</td>
+              <td>1h 05m</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <!-- NAVEGACIÓN -->
+    <div class="mt-4 d-flex gap-3">
+      <a href="index.html" class="btn btn-outline-secondary">Volver al inicio</a>
+      <a href="sell.html" class="btn btn-outline-primary">Ir a Sell</a>
+      <a href="messaging.html" class="btn btn-outline-primary">Ir a Messaging</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

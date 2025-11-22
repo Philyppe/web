@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Automations - Zendesk Demo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+  <style>
+    .rule-card {
+      border-left: 4px solid #0d6efd;
+      background: #ffffff;
+    }
+    .auto-card {
+      border-left: 4px solid #6610f2;
+      background: #ffffff;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+
+  <div class="container py-4">
+
+    <!-- BREADCRUMB -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Automations</li>
+      </ol>
+    </nav>
+
+    <h2 class="mb-3">Zendesk Automations</h2>
+    <p class="text-muted"></p>
+
+    <!-- TRIGGERS -->
+    <h4 class="mt-4">Triggers</h4>
+    <p class="text-muted">Acciones automáticas que se ejecutan cuando ocurre un evento.</p>
+
+    <div class="card shadow-sm rule-card mb-3">
+      <div class="card-body">
+        <h5 class="mb-2">Asignar ticket según tipo</h5>
+        <p class="mb-1"><strong>Condiciones:</strong></p>
+        <ul>
+          <li>Tipo: *Problema técnico*</li>
+        </ul>
+        <p class="mb-1"><strong>Acciones:</strong></p>
+        <ul>
+          <li>Asignar al grupo: *Soporte Técnico*</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card shadow-sm rule-card mb-3">
+      <div class="card-body">
+        <h5 class="mb-2">Notificar al cliente cuando se actualiza el ticket</h5>
+        <p class="mb-1"><strong>Condiciones:</strong></p>
+        <ul>
+          <li>Estado cambiado por agente</li>
+        </ul>
+        <p class="mb-1"><strong>Acciones:</strong></p>
+        <ul>
+          <li>Enviar correo a solicitante</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- AUTOMATIONS -->
+    <h4 class="mt-5">Automations</h4>
+    <p class="text-muted">Reglas que se ejecutan en intervalos de tiempo regulares.</p>
+
+    <div class="card shadow-sm auto-card mb-3">
+      <div class="card-body">
+        <h5 class="mb-2">Cerrar tickets inactivos</h5>
+        <p class="mb-1"><strong>Condiciones:</strong></p>
+        <ul>
+          <li>Ticket en estado *Pendiente* por más de 5 días</li>
+        </ul>
+        <p class="mb-1"><strong>Acciones:</strong></p>
+        <ul>
+          <li>Cambiar estado a *Cerrado*</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card shadow-sm auto-card mb-3">
+      <div class="card-body">
+        <h5 class="mb-2">Recordatorio a agentes</h5>
+        <p class="mb-1"><strong>Condiciones:</strong></p>
+        <ul>
+          <li>Ticket sin actualización por 2 días</li>
+        </ul>
+        <p class="mb-1"><strong>Acciones:</strong></p>
+        <ul>
+          <li>Enviar correo al agente asignado</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- NAVEGACIÓN -->
+    <div class="mt-4 d-flex gap-3">
+      <a href="index.html" class="btn btn-outline-secondary">Volver al inicio</a>
+      <a href="support.html" class="btn btn-outline-primary">Ir a Support</a>
+      <a href="guide.html" class="btn btn-outline-primary">Ir a Guide</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
